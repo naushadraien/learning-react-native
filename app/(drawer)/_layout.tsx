@@ -13,6 +13,11 @@ const DrawerLayout = () => {
         drawerContent={CustomDrawerContent}
         screenOptions={({ navigation }) => ({
           drawerPosition: "right",
+          drawerType: "slide", // Ensure smooth sliding animation
+          overlayColor: "rgba(0, 0, 0, 0.5)", // Add overlay for better visual effect
+          drawerStyle: {
+            width: 250, // Customize drawer width
+          },
           headerLeft: () => null,
           headerRight: () => (
             <TouchableOpacity onPress={() => navigation.toggleDrawer()}>
