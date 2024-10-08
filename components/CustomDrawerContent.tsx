@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
 import React from "react";
 import {
   DrawerContent,
@@ -28,17 +28,48 @@ export default function CustomDrawerContent(
         scrollEnabled={false}
         contentContainerStyle={{
           backgroundColor: "#dde3fe",
-          height: "100%",
+          // height: "100%",
         }}
       >
-        <DrawerItemList {...props} />
-        <DrawerItem
-          label={"Logout"}
-          onPress={() => {
-            router.replace("/");
-            navigation.dispatch(DrawerActions.closeDrawer());
+        <View
+          style={{
+            padding: 20,
           }}
-        />
+        >
+          <Image
+            source={{ uri: "https://avatar.iran.liara.run/public" }}
+            style={{
+              alignSelf: "center",
+              height: 100,
+              width: 100,
+            }}
+          />
+          <Text
+            style={{
+              textAlign: "center",
+              fontWeight: "600",
+              fontSize: 20,
+              marginTop: 10,
+            }}
+          >
+            User Name
+          </Text>
+        </View>
+        <View
+          style={{
+            backgroundColor: "white",
+            paddingTop: 10,
+          }}
+        >
+          <DrawerItemList {...props} />
+          <DrawerItem
+            label={"Logout"}
+            onPress={() => {
+              router.replace("/");
+              navigation.dispatch(DrawerActions.closeDrawer());
+            }}
+          />
+        </View>
       </DrawerContentScrollView>
       <View
         style={{
