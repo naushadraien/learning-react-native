@@ -5,6 +5,7 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { Ionicons } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native";
 import CustomDrawerContent from "@/components/CustomDrawerContent";
+import TabLayout from "../(tabs)/_layout";
 
 const DrawerLayout = () => {
   return (
@@ -39,12 +40,13 @@ const DrawerLayout = () => {
         })}
       >
         <Drawer.Screen
-          name="index"
+          name="(tabs)"
           options={{
             headerTitle: "",
-            drawerLabel: "Home",
+            drawerLabel: "Tabs",
+            // drawerStyle: { display: "none" },
             drawerIcon: ({ size, color }) => (
-              <Ionicons name="home-outline" size={size} color={color} />
+              <Ionicons name="grid-outline" size={size} color={color} />
             ),
           }}
         />

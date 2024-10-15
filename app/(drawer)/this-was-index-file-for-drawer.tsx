@@ -1,3 +1,4 @@
+//This file was the index.tsx file for the drawer which overWrites tabs layout
 import { DrawerActions } from "@react-navigation/native";
 import { useNavigation } from "expo-router";
 import React from "react";
